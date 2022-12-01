@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
+from django.urls import reverse_lazy
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -24,6 +26,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-*o=cks(^0cr%*-j96@b%y78k^&$1=gg^9=p1tkyzk5s452pl1^'
 
 AUTH_USER_MODEL = 'usuarios.usuario'
+
+LOGIN_REDIRECT_URL = reverse_lazy('Home')
+LOGOUT_REDIRECT_URL = reverse_lazy('Home')
+LOGIN_URL = reverse_lazy('login')
+
 
 
 
@@ -81,20 +88,20 @@ WSGI_APPLICATION = 'blog.wsgi.application'
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
-AUTH_PASSWORD_VALIDATORS = [
-        {
-            'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
-        },
-        {
-            'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
-        },
-        {
-            'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
-        },
-        {
-            'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
-        },
-    ]
+# AUTH_PASSWORD_VALIDATORS = [
+#         {
+#             'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+#         },
+#         {
+#             'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+#         },
+#         {
+#             'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+#         },
+#         {
+#             'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+#         },
+#     ]
 
 
 # Internationalization

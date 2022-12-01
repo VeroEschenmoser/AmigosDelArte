@@ -3,10 +3,14 @@
 }
 .txtoquienes{
     margin: 0 30px 30px;
+    font-size: medium;
 }
 ul {
     list-style: none;
 }
-.txtquienes2{
+.txtquienes2{ 
     margin: 10px 30px 50px
+}
+p {
+    font-size: larger;
 }
