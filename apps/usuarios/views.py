@@ -11,5 +11,5 @@ class Registro(CreateView):
 	#FORMULARIO DJANGO
 	form_class = RegistroForm
 	success_url = reverse_lazy('login')
-	template_name = 'usuarios/registro.html'
+	template_name = 'usuarios/registros.html'
 
