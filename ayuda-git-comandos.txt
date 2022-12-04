@@ -1,0 +1,14 @@
+comandos para subir cambios al repo. ( PUSHEAR )
+
+git add .
+
+git commit -m " comentario descripcion del commit"
+
+git push -u origin main ---> sube al repo de git hub
+
+--------------------------------------------------------------
+
+comando para upgradear actualizar el repo local
+*hacer cada vez que un compañero sube un cambio
+
+git pull
