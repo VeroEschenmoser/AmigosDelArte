@@ -22,13 +22,13 @@ from django.contrib.auth import views as auth
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path ('', views.Home , name='Home.html'),
+    path ('', views.Home , name='Home'),
     
-    path ('Quienes/', views.Quienes , name='Quienes.html'),
+    path ('Quienes/', views.Quienes , name='Quienes'),
     
 
     path('login/',auth.LoginView.as_view(template_name='usuarios/login.html'),name='login'),
-    path('logout/',auth.LogoutView.as_view(),name="logout"),
+    path('logout/',auth.LogoutView.as_view(),name='logout'),
     
     
     # url de apps

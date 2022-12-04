@@ -105,7 +105,7 @@
                 <strong>Hola {{ user.username }}</strong>
 			    <a class="btn btn-sm btn-outline-secondary" href="{% url 'logout' %}">LOGOUT</a>
 		    {% else %}
-                <a class="btn btn-sm btn-outline-secondary" href={% url 'login'%}>LOGIN</a>
+                <a class="btn btn-sm btn-outline-secondary" href="{% url 'login' %}">LOGIN</a>
                 <a class="btn btn-sm btn-outline-secondary" href="{% url 'usuarios:registro' %}">Registrar</a>
 		    {% endif %}
 
@@ -115,9 +115,9 @@
 
     <div class="nav-scroller py-1 mb-2">
         <nav class="nav d-flex justify-content-between">
-        <a class="p-2 link-secondary" href={% url 'Home.html'%}>Home</a>
-        <a class="p-2 link-secondary" href={% url 'Quienes.html'%}>Quienes Somos </a>
-        <a class="p-2 link-secondary" href={% url 'noticias:listar.html'%}>Noticias</a>
+        <a class="p-2 link-secondary" href="{% url 'Home'%}">Home</a>
+        <a class="p-2 link-secondary" href="{% url 'Quienes'%}">Quienes Somos </a>
+        <a class="p-2 link-secondary" href="{% url 'noticias:listar.html'%}">Noticias</a>
         <a class="p-2 link-secondary" href="#">Eventos</a>
         
         </nav>
@@ -130,17 +130,20 @@
 
         <footer class="blog-footer">
             <p>Contactanos </p>
-        
-            <div class="p-4">
-            <h4 class="fst-italic">Nuestras Redes:</h4>
-            <ol class="list-unstyled">
-                <li><a href="#">GitHub</a></li>
-                <li><a href="#">Twitter</a></li>
-                <li><a href="#">Facebook</a></li>
+            <div class="p-2">
             </ol>
+                <h5 class="fst-italic">Encuentranos Aqui:</h5>
+            <ol class="list-unstyled">
+                <li><a href="https://www.google.com.ar/maps/place/Fundaci%C3%B3n+Amigos+del+Arte+y+Turismo/@-25.9456008,-60.6207856,19z/data=!4m5!3m4!1s0x94404cfba5224f0b:0xbe1797f5f1777f83!8m2!3d-25.9455663!4d-60.6203754?hl=es">Ubicacion</a></li>
+            </ol>
+                <h5 class="fst-italic">Nuestras Redes:</h5>
+            <ol class="list-unstyled">
+                <li><a href="mailto:info@amigosdelarteyturismo.org">Correo</a></li>
+                <li><a href="https://www.instagram.com/escultoresenelimpenetrable/" target="_blank">Instagram</a></li>
+                <li><a href="https://www.facebook.com/EscultoresenelImpenetrable">Facebook</a></li>   
             </div>
             <p>
-            <a href="#">Volver Arriba</a>
+            <a href="#" >Volver Arriba</a>
             </p>
         </footer>
         

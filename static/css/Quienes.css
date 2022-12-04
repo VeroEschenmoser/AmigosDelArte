@@ -14,3 +14,14 @@ ul {
 p {
     font-size: larger;
 }
+
+.banner{
+    background-image:url(../img/el-impenetrable.jpeg);
+    background-repeat:no-repeat;
+    background-size: cover;
+}
+.blog-footer{
+    display: flex;
+    flex-direction: column;
+
+}
