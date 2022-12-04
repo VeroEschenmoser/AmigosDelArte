@@ -2,5 +2,26 @@
 {% load static%}
 
 {%block contenido%}
-<h1> aca van las noticias</h1>
+
+
+
+{% for post in post_noticias %}
+
+<div class="card" style="max-width: 90%; min-height: 400px; margin: 0 auto; border-radius: 15px; box-shadow: 5px 10px 3px rgb(146, 182, 184);">
+    {% if post.imagen %}
+        
+            <img src="{{ post.imagen.url }}" class="card-img-top" width="450px" height="350px" style="border-radius: 15px; padding-left: 15%; padding-right: 15%;">    
+    {% else %}    
+            <img src="{% static '/img/No-image-found.jpg'%}" class="card-img-top" width="450px" height="350px" style="border-radius: 15px; padding-left: 15%; padding-right: 15%;">    
+    {% endif %}
+    <div class="card-body">
+        <h5 class="card-title"> {{ post.titulo.title }} 
+            
+        </small></h5>
+        <p class="card-text" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 1500px;">{{ post.contenido | striptags|safe }} - </p>
+
+        <p class="card-text"><small class="text-muted">Fecha Publicación: {{ post.fecha }}</small></p>
+    </div>
+</div>
+{% endfor %}
 {%endblock contenido%}

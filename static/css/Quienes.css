@@ -20,8 +20,30 @@ p {
     background-repeat:no-repeat;
     background-size: cover;
 }
-.blog-footer{
-    display: flex;
+.contenedorfooter{
+    display: flex !important;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+.p-2.contacto{
+    display: flex !important;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+.p-2.ubicacion{
+    display: flex !important; 
     flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+.p-2.redes{
+    display: flex !important; 
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
 
+body{
+    margin: 0;
+    padding: 0;
 }

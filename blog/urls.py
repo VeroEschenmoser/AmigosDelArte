@@ -33,6 +33,7 @@ urlpatterns = [
     
     # url de apps
     path('Noticias/', include('apps.noticias.urls')),
+    path('agregar_posteo/', include('apps.noticias.urls')),
     path('Usuario/',include('apps.usuarios.urls')),
 
     

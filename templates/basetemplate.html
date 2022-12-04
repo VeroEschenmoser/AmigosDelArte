@@ -2,12 +2,12 @@
 
 
     <!doctype html>
-    <html lang="es">
+    <html lang="es"> 
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
-        <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+        <!-- <meta name="author" content="Veronica Eschenmoser"> -->
         <meta name="generator" content="Hugo 0.104.2">
         <title>Amigos del arte y turismo</title>
 
@@ -91,7 +91,7 @@
     </head>
     <body>
         
-    <div class="container">
+    <div >
     <header class="blog-header lh-1 py-3">
         <div class="row flex-nowrap justify-content-between align-items-center">
         <div class="col-4 pt-1">
@@ -100,10 +100,11 @@
         <div class="col-4 text-center">
             <h1 class="blog-header-logo text-dark">Fundación Amigos del Arte y Turismo </h1>
         </div>
-        <div class="col-4 d-flex justify-content-end align-items-center">
+        <div class="col-4 d-flex justify-content-end align-items-center g-col-4">
             {% if user.is_authenticated %}
                 <strong>Hola {{ user.username }}</strong>
-			    <a class="btn btn-sm btn-outline-secondary" href="{% url 'logout' %}">LOGOUT</a>
+			    <a class="btn btn-sm btn-outline-secondary" href="{% url 'noticias:agregar_posteo' %}">Crear Noticias</a>
+                <a class="btn btn-sm btn-outline-secondary" href="{% url 'logout' %}">LOGOUT</a>
 		    {% else %}
                 <a class="btn btn-sm btn-outline-secondary" href="{% url 'login' %}">LOGIN</a>
                 <a class="btn btn-sm btn-outline-secondary" href="{% url 'usuarios:registro' %}">Registrar</a>
@@ -129,18 +130,25 @@
     {% endblock contenido%}
 
         <footer class="blog-footer">
-            <p>Contactanos </p>
-            <div class="p-2">
-            </ol>
+            
+            <div class="p-2 contacto">
+                <p class="fst-italic">Contactanos!! </p>
+            </div>
+            <div class="contenedorfooter">
+            <div class="p-2 ubicacion">
                 <h5 class="fst-italic">Encuentranos Aqui:</h5>
-            <ol class="list-unstyled">
-                <li><a href="https://www.google.com.ar/maps/place/Fundaci%C3%B3n+Amigos+del+Arte+y+Turismo/@-25.9456008,-60.6207856,19z/data=!4m5!3m4!1s0x94404cfba5224f0b:0xbe1797f5f1777f83!8m2!3d-25.9455663!4d-60.6203754?hl=es">Ubicacion</a></li>
-            </ol>
+                <ol class="list-unstyled">
+                    <li><a href="https://www.google.com.ar/maps/place/Fundaci%C3%B3n+Amigos+del+Arte+y+Turismo/@-25.9456008,-60.6207856,19z/data=!4m5!3m4!1s0x94404cfba5224f0b:0xbe1797f5f1777f83!8m2!3d-25.9455663!4d-60.6203754?hl=es">Ubicacion</a></li>
+                </ol>
+            </div>
+            <div class="p-2 redes">
                 <h5 class="fst-italic">Nuestras Redes:</h5>
             <ol class="list-unstyled">
                 <li><a href="mailto:info@amigosdelarteyturismo.org">Correo</a></li>
                 <li><a href="https://www.instagram.com/escultoresenelimpenetrable/" target="_blank">Instagram</a></li>
-                <li><a href="https://www.facebook.com/EscultoresenelImpenetrable">Facebook</a></li>   
+                <li><a href="https://www.facebook.com/EscultoresenelImpenetrable">Facebook</a></li>  
+            </ol> 
+            </div>
             </div>
             <p>
             <a href="#" >Volver Arriba</a>
