@@ -22,23 +22,5 @@
     </div>
     {%endfor%}
 
-<!-- {% for post in post_noticias %}
 
-<div class="col p-4 d-flex flex-column position-static">
-    {% if post.imagen %}
-        
-            <img src="{{ post.imagen.url }}" class="card-img-top" width="100px" height="200px" style="border-radius: 15px; padding-left: 40%; padding-right: 40%;">    
-    {% else %}    
-            <img src="{% static '/img/No-image-found.jpg'%}" class="card-img-top" width="450px" height="350px" style="border-radius: 15px; padding-left: 15%; padding-right: 15%;">    
-    {% endif %}
-    <div class="card-body">
-        <h5 class="card-title"> {{ post.titulo.title }} 
-            
-        </small></h5>
-        <p class="card-text" style=" max-width: 1500px;">{{ post.contenido |safe }} - </p>
-
-        <p class="card-text"><small class="text-muted">Fecha Publicación: {{ post.fecha }}</small></p>
-    </div>
-</div>
-{% endfor %} -->
 {%endblock contenido%}
