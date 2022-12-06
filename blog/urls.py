@@ -35,6 +35,7 @@ urlpatterns = [
     path('Noticias/', include('apps.noticias.urls')),
     path('agregar_posteo/', include('apps.noticias.urls')),
     path('Usuario/',include('apps.usuarios.urls')),
+    path('Eventos/', include('apps.eventos.urls')),
 
     
 
