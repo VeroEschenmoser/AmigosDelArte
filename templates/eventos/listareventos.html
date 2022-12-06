@@ -107,16 +107,16 @@
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
             <div class="col">
             <div class="card shadow-sm">
-                <img src="{{ evento.imagen.url }}" class="card-img-top" max-width="200px" height="250px" style="border-radius: 15px; padding-top: 20px;"> 
+                <img src="{{ post.imagen.url }}" class="card-img-top" max-width="200px" height="500px" style="border-radius: 15px; padding-top: 0px;"> 
             
                 <div class="card-body">
-                    <p class="card-text">aca va ael contenido del evento </p>
+                    <p class="card-text">{{ post.contenido |safe }} </p>
                 </div>
             </div>
             </div>
         </div>
     
-        </div>  -->
+        </div> 
 </div>
 
 {%endfor%}
