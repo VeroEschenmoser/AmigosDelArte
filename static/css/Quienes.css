@@ -1,6 +1,9 @@
 .tituloquienes {
     margin: 0 30px 30px;
 }
+#mapa{
+  padding: 10px 500px 20px;
+}
 .txtoquienes{
     margin: 0 30px 30px;
     font-size: medium;
