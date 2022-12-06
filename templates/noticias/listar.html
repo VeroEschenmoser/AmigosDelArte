@@ -4,10 +4,27 @@
 {%block contenido%}
 
 
-
 {% for post in post_noticias %}
+    <div class="p-4 p-md-8  col-md-12">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-9 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-success">Noticias</strong>
+            <h3 class="mb-0">{{post.titulo}}</h3>
+            <div class="mb-1 text-muted">{{ post.fecha }}</div>
+            <p class="mb-auto">{{ post.contenido |safe }}</p>
+            
+        </div>
+        <div class="col-3 d-none d-lg-block">
+        
+            <img src="{{ post.imagen.url }}" class="card-img-top" max-width="200px" height="250px" style="border-radius: 15px; padding-top: 20px;">    
+        </div>
+        </div>
+    </div>
+    {%endfor%}
 
-<div class="card" style="max-width: 90%; min-height: 400px; margin: 0 auto; border-radius: 15px; box-shadow: 5px 10px 3px rgb(146, 182, 184) p-10px;">
+<!-- {% for post in post_noticias %}
+
+<div class="col p-4 d-flex flex-column position-static">
     {% if post.imagen %}
         
             <img src="{{ post.imagen.url }}" class="card-img-top" width="100px" height="200px" style="border-radius: 15px; padding-left: 40%; padding-right: 40%;">    
@@ -23,5 +40,5 @@
         <p class="card-text"><small class="text-muted">Fecha Publicación: {{ post.fecha }}</small></p>
     </div>
 </div>
-{% endfor %}
+{% endfor %} -->
 {%endblock contenido%}
