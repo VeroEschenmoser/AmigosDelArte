@@ -94,33 +94,33 @@
     <section class="py-5 text-center container">
         <div class="row py-lg-5">
         <div class="col-lg-6 col-md-8 mx-auto">
-            <h1>Eventos</h1>
+            <h1><b>Eventos</b></h1>
             
         </div>
         </div>
     </section>
-
+<div class="d-flex col-12">
     {% for post in post_eventos %}
-<div class="album py-5 bg-light col">
-    <div class="container">
+    <div class="album py-5 bg-light col-4">
+        <div class="container">
 
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-            <div class="col">
-            <div class="card shadow-sm">
-                <img src="{{ post.imagen.url }}" class="card-img-top" max-width="200px" height="500px" style="border-radius: 15px; padding-top: 0px;"> 
-            
-                <div class="card-body">
-                    <p class="card-text">{{ post.contenido |safe }} </p>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <div class="col-md-12">
+                <div class="card shadow-sm">
+                    <img src="{{ post.imagen.url }}" class="card-img-top" max-width="200px" height="500px" style="border-radius: 15px; padding-top: 0px;"> 
+                
+                    <div class="card-body">
+                        <p class="card-text">{{ post.contenido |safe }} </p>
+                    </div>
+                </div>
                 </div>
             </div>
-            </div>
-        </div>
-    
+        
         </div> 
-</div>
+    </div>
 
-{%endfor%}
-    
+    {%endfor%}
+</div>   
 </main>
 
 
