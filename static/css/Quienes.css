@@ -32,10 +32,13 @@ p {
     font-size: larger;
 }
 
-.banner{
-    background-image:url(../img/el-impenetrable.jpeg);
-    background-repeat:no-repeat;
-    background-size: cover;
+.banner3{
+    background: rgb(182,194,192);
+background: linear-gradient(90deg, rgba(182,194,192,0.5) 0%, rgba(103,149,141,0.5) 49%);
+}
+.banner2{
+    background: rgb(51,49,208);
+background: linear-gradient(90deg, rgba(51,49,208,0.5018382352941176) 0%, rgba(137,57,215,0.5) 18%, rgba(176,42,139,0.5) 32%, rgba(253,156,29,0.5) 50%, rgba(224,235,44,0.5) 67%, rgba(55,230,107,0.5) 85%);
 }
 .contenedorfooter{
     display: flex !important;

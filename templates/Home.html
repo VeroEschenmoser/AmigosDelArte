@@ -15,29 +15,13 @@
         <h3 class="fst-italic">Nuestra Mision</h3>
         <h4 class="lead my-3 p-4 fst-italic ">Ser partícipes del desarrollo cultural, brindar oportunidades y capacitación del Arte y hacer del mismo un atractivo turístico.
             </h4>
-        
     </div>
 
-    <div class="row mb-2">
-    <!-- <div class="col-md-6">
-        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-        <div class="col p-4 d-flex flex-column position-static">
-            <strong class="d-inline-block mb-2 text-primary">Noticias </strong>
-            <h3 class="mb-0">Titulo de la Noticia </h3>
-            <div class="mb-1 text-muted">Fecha</div>
-            <p class="card-text mb-auto">Breve resumen de la noticia</p>
-            <a href="#" class="stretched-link">Continuar leyendo</a>
-        </div>
-        <div class="col-auto d-none d-lg-block">
-            <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Foto</text></svg>
-
-        </div>
-        </div>
-    </div> -->
+    
     {% for post in ultima_noticias %}
     <div class="p-4 p-md-8  col-md-6">
         <div class="row g-0 border rounded overflow-hidden flex-md-row mb-9 shadow-sm h-md-250 position-relative">
-        <div class="col-8 p-3 d-flex flex-column position-static">
+        <div class="col-md-8 p-3 d-flex flex-column position-static">
             <strong class="d-inline-block mb-2 text-success">Noticias</strong>
             <h3 class="mb-0">{{post.titulo}}</h3>
             <div class="mb-1 text-muted">{{ post.fecha }}</div>
