@@ -31,6 +31,11 @@
 
 
         <style>
+            .contenedor_lat{
+            display: flex ;
+            justify-content: center;
+            align-items:  	center;
+}
         .bd-placeholder-img {
             font-size: 1.125rem;
             text-anchor: middle;
@@ -111,18 +116,21 @@
                 <a class="btn btn-sm btn-outline-secondary" href="{% url 'login' %}">LOGIN</a>
                 <a class="btn btn-sm btn-outline-secondary" href="{% url 'usuarios:registro' %}">Registrar</a>
 		    {% endif %}
-            </div>
-        </div>
+         </div>
+         </div>
+        
     </header>
+    
 </div>
 
     <div class="nav-scroller py-1 mb-2">
         <nav class="nav d-flex justify-content-between">
+            <div class=".contenedor_lat"></div>
         <a class="p-2 link-secondary" href="{% url 'Home'%}"><b>Inicio</b></a>
         <a class="p-2 link-secondary" href="{% url 'Quienes'%}"><b>Quienes Somos</b></a>
         <a class="p-2 link-secondary" href="{% url 'noticias:listar.html'%}"><b>Noticias</b></a>
         <a class="p-2 link-secondary" href="{% url 'eventos:listareventos.html'%}"><b>Eventos</b></a>
-        
+        <div class=".contenedor_lat"></div>
         </nav>
     </div>
     </div>
