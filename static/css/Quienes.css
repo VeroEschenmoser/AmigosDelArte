@@ -1,7 +1,7 @@
 .contenedor{
-background-color:darkgray;
+background-color:darkgrey;
 height: 150hv;
-margin: 10%;
+margin: 1%;
 display: flex ;
 flex-direction: column;
 justify-content: center;
