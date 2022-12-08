@@ -1,5 +1,5 @@
 from django import forms
-from .models import Post
+from .models import Post,Comment
 
 
 class PosteoForm(forms.ModelForm):
@@ -26,5 +26,17 @@ class EdicionForm(forms.ModelForm):
             'contenido': forms.Textarea(attrs={'class':'form-control','cols': 80, 'rows': 5}),
             #'autor': forms.Select(attrs={'class': 'form-control'}),
             # 'categoria': forms.Select(attrs={'class':'form-control'}),
-        }
+            }
+        
+class CommentForm(forms.ModelForm):
+    content=forms.CharField(label="",widget=forms.Textarea(
+    attrs={
+        'class':'form-control',
+        'placeholder':'Comentar aqui!!',
+        'rows':4,
+        'cols':50
+    }))
+    class Meta:
+        model = Comment
+        fields=['content']
         
