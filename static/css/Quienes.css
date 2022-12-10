@@ -125,7 +125,6 @@ p {
 }
 
 .banner3{
-    
     background: rgb(142,235,137);
     background: linear-gradient(180deg, rgba(142,235,137,0.44021358543417366) 40%, rgba(18,94,26,1) 100%);
     
@@ -165,4 +164,3 @@ body{
     margin: 0;
     padding: 0;
 }
-
