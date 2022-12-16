@@ -8,8 +8,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 
 # Create your views here.
-""" def listar_Noticias (request):
-    return render (request, 'noticias/listar.html') """
+
 
 class CrearPosteo(CreateView):
     model = Post
@@ -18,12 +17,17 @@ class CrearPosteo(CreateView):
     #fields = '__all__'
     #fields = ['titulo', 'contenido']
     def get_success_url(self) -> str:
-        return reverse_lazy('listar.html')
+        return reverse_lazy('home.html')
 
-def listar_Noticias(request):
-    posts = Post.objects.all()
+def listar_NoticiasArte(request):
+    posts = Post.objects.all().filter(categoria=1)
     post_ordenados = posts.order_by('-fecha')
-    return render(request, 'noticias/listar.html', { 'post_noticias': post_ordenados})
+    return render(request, 'noticias/listararte.html', { 'post_noticias': post_ordenados})
+
+def listar_NoticiasTurismo(request):
+    posts = Post.objects.all().filter(categoria=2)
+    post_ordenados = posts.order_by('-fecha')
+    return render(request, 'noticias/listarturismo.html', { 'post_noticias': post_ordenados})
 
 @login_required  
 def post_detail(request,pk):
