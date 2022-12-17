@@ -41,7 +41,7 @@ def post_detail(request,pk):
                 content=request.POST.get('content')
                 comment=Comment.objects.create(post=post,user=request.user,content=content)
                 comment.save()
-                return redirect('/Noticias')
+                return redirect('/')
     else:
         cf=CommentForm()
         
@@ -59,4 +59,4 @@ def deletecomment(request, id):
     comment=get_object_or_404(Comment,id=id)
     comment.delete()
     messages.success(request,f'Comentario borrado!')
-    return redirect('/Noticias')
+    return redirect('/')
