@@ -34,12 +34,12 @@ p {
 
 .banner3{
     
-    background: rgb(142,235,137);
-    background: linear-gradient(180deg, rgba(142,235,137,0.44021358543417366) 40%, rgba(18,94,26,1) 100%);
+    
+    background: green;
 }
 .banner2{
     background: rgb(125,124,123);
-    background: linear-gradient(90deg, rgba(125,124,123,0.3477766106442577) 0%, rgba(223,223,216,0.4458158263305322) 52%);
+    
 }
 .banner{
     background: whitesmoke;
